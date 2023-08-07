@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div id="container"> <!-- Container div added -->
+        <div id="language-selector">
+            <a href="#" onclick="setLanguage('en')"><img src="/picture/united-states.png" alt="English" /></a>
+            <a href="#" onclick="setLanguage('vi')"><img src="/picture/vietnam.png" alt="Vietnamese" /></a>
+        </div>
+        
+        <div id="left">
+            <img id ="logo_front" src="/picture/DN.png" alt="Your Logo" > 
+        </div>
+        <div id="right">
+            <h1>Welcome</h1>
+            <img src="/picture/avatar.JPG" alt="Your Avatar" id="avatar">
+            <p>Together, we can make a difference. Let's innovate with <span class="highlight-name">Duy Nguyen</span>.</p>
+            <a href="about.html" id="learn-more">Explore me</a>
+        </div>
+    </div> <!-- Closing container div -->
+    <script>
+        window.onload = function () {
+            var avatar = document.getElementById('avatar');
+            var logo = document.getElementById('logo_front');
+            avatar.classList.add('spin');
+            logo.classList.add('spinn');
+            // Remove the 'spin' class after the animation has completed
+            setTimeout(function () {
+            avatar.classList.remove('spin');
+            logo.classList.remove('spinn');
+            }, 1000);
+        };
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                window.location.href = 'index.html'; // Path to the English version
+            } else if (lang === 'vi') {
+                window.location.href = 'index-vi.html'; // Path to the Vietnamese version
+            }
+}
+
+   
+
+    </script>
+    
+</body>
+</html>
+
